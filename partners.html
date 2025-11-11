@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners | Retired Mafia of Ohio</title>
+    <style>
+        :root {
+            --black: #000;
+            --white: #fff;
+            --gray: #f2f2f2;
+            --dark-gray: #222;
+            --light-gray: #ccc;
+            --accent: #b30000;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--white);
+            color: var(--black);
+        }
+
+        /* Header / Navigation */
+        header {
+            background-color: var(--black);
+            color: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--light-gray);
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: var(--white);
+            margin: 4px 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 2rem;
+            background-image: url('images/partners-hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Partners Section */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 3px solid var(--light-gray);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .partner-tile {
+            background-color: var(--gray);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* centers the image horizontally */
+            justify-content: flex-start;
+            padding-top: 1rem; /* space above image */
+        }
+
+        .partner-tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+
+        .partner-image {
+            width: 200px;
+            height: 200px;
+            background-color: var(--light-gray);
+            background-size: contain; /* makes entire logo visible */
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 auto; /* fallback centering */
+            border-radius: 6px;
+        }
+
+        .partner-info {
+            padding: 1.5rem;
+        }
+
+        .partner-info h3 {
+            margin: 0.5rem 0;
+            color: var(--dark-gray);
+        }
+
+        .partner-info p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .partner-info a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .partner-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--black);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--light-gray);
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        footer a:hover {
+            color: var(--white);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: var(--black);
+                text-align: center;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                margin: 1rem 0;
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo">
+            <h1>Retired Mafia of Ohio</h1>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="members.html">Members</a>
+            <a href="partners.html">Partners</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Our Trusted Partners</h1>
+        <p>We’re proud to work with organizations and individuals who share our passion for cars, community, and helping others.</p>
+    </section>
+
+    <!-- Partners Section -->
+    <section>
+        <h2>Meet Our Partners</h2>
+
+        <div class="partners-grid">
+            <div class="partner-tile">
+                <div class="partner-image" style="background-image: url('images/partnerLogo/corsaLogo.png');"></div>
+                <div class="partner-info">
+                    <h3>Corsa View</h3>
+                    <p>Meet. Share. Drive.</p>
+                    <a href="https://www.corsaview.com/" target="_blank">Visit Website →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Retired Mafia of Ohio. All rights reserved.</p>
+        <div>
+            <a href="privacyPolicy.html">Privacy Policy</a> |
+            <a href="termsOfService.html">Terms of Service</a> |
+            <a href="pageNotFound.html">Accessibility</a> |
+            <a href="contact.html">Contact Support</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

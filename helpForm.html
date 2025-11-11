@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retired Mafia of Ohio | Request Roadside Assistance</title>
+    <style>
+        :root {
+            --black: #000;
+            --white: #fff;
+            --gray: #f2f2f2;
+            --dark-gray: #222;
+            --light-gray: #ccc;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--white);
+            color: var(--black);
+        }
+
+        header {
+            background-color: var(--black);
+            color: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--light-gray);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: var(--white);
+            margin: 4px 0;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 3px solid var(--light-gray);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Responsive iframe wrapper */
+        .form-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* Default aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .form-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        footer {
+            background-color: var(--black);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--light-gray);
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        footer a:hover {
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: var(--black);
+                text-align: center;
+            }
+
+            nav a {
+                margin: 1rem 0;
+                display: block;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            .form-container {
+                padding-top: 130%; /* Taller ratio for mobile screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Retired Mafia of Ohio</h1>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a href="pageNotFound.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">Contact</a>
+            <a href="members.html">Members</a>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <section>
+        <h2>Request Roadside Assistance</h2>
+        <p>If you’re in need of help on the road — such as a jump start, flat tire, or emergency car meet support — please fill out the form below.  
+           Our volunteers will contact you as soon as possible. Please note that this is volunteer, we will give you a call to let you know we will be able to help you, but we may not be able to help 100% of our calls.</p>
+
+        <div class="form-container">
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeOmLa5mBNsM8Q3Gr3vSAbHzWJJyQQlFN6IiMAwceSeZSX13g/viewform?embedded=true"
+                frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Retired Mafia of Ohio. All rights reserved.</p>
+        <div>
+            <a href="privacyPolicy.html">Privacy Policy</a> |
+            <a href="termsOfService.html">Terms of Service</a> |
+            <a href="pageNotFound.html">Accessibility</a> |
+            <a href="contact.html">Contact Support</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
